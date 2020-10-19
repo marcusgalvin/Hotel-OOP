@@ -1,9 +1,9 @@
 
 public class Room {
 	
-	int roomNumber = 102;
-	String roomType = "";
-	int floorNumber = 5;
+	int roomNumber;
+	String roomType;
+	int floorNumber;
 	boolean isOccupied = false;
 	boolean needsCleaning = false;
 //	occupant = client
@@ -13,9 +13,17 @@ public class Room {
 	
 	
 	
-	public boolean isRoomReserved() {
-		return isOccupied = true;
+	public void reserve(String roomType, int floorNumber, int roomNumber, boolean isOccupied, boolean needsCleaning, int avgPrice) {
+		isOccupied = true;
+		
 		//assign client later
+	}
+	
+	public void checkout() {
+		//remove client from room
+		isOccupied = false;
+		needsCleaning = true;
+		System.out.println("outsanding balance: " + avgPrice);
 	}
 
 }
